@@ -263,3 +263,25 @@ button,input,textarea,select{font:inherit}
 .leadbot-actions button{grid-column:1/-1;background:#e4dfd4;color:#333}
 .leadbot-privacy{margin:0;padding:0 14px 12px;text-align:center;color:#747b81;font-size:11px}
 @media(max-width:620px){.leadbot{right:12px;bottom:76px}.leadbot-panel{position:fixed;left:12px;right:12px;bottom:74px;width:auto;height:min(600px,calc(100vh - 100px));border-radius:18px}.leadbot-launch b{display:none}.leadbot-launch{width:54px;padding:0;justify-content:center}.leadbot-launch span{background:transparent;color:#111;font-size:21px}}
+
+/* Chat bubble layout correction */
+.leadbot{right:24px;bottom:24px;z-index:9999;isolation:isolate}
+.leadbot-launch{position:relative;width:64px;height:64px;min-height:64px;padding:0;border:3px solid #fff;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#f2c358,#cf8d16);box-shadow:0 8px 0 #07111b,0 16px 38px rgba(0,0,0,.35);transition:transform .18s ease,box-shadow .18s ease}
+.leadbot-launch:hover{transform:translateY(-3px);box-shadow:0 10px 0 #07111b,0 19px 42px rgba(0,0,0,.38)}
+.leadbot-launch:focus-visible{outline:4px solid #fff;outline-offset:4px}
+.leadbot-launch span:first-child{display:block;width:auto;height:auto;border:0;border-radius:0;background:transparent;color:#07111b;font-size:28px;line-height:1;filter:none}
+.leadbot-label{position:absolute;right:74px;top:50%;transform:translateY(-50%);width:max-content;padding:9px 12px;border-radius:10px;background:#07111b;color:#fff;font-size:13px;font-weight:900;box-shadow:0 8px 20px rgba(0,0,0,.22);pointer-events:none}
+.leadbot-label:after{content:"";position:absolute;right:-7px;top:50%;transform:translateY(-50%);border:7px solid transparent;border-left-color:#07111b;border-right:0}
+.leadbot-panel{position:fixed;right:24px;bottom:104px;width:390px;max-width:calc(100vw - 32px);height:580px;max-height:calc(100dvh - 128px);margin:0;border:1px solid rgba(255,255,255,.2);border-radius:22px;box-shadow:0 28px 80px rgba(0,0,0,.46);transform:none}
+.leadbot-panel.open{display:flex}
+.leadbot-panel>header{flex:0 0 auto;border-radius:21px 21px 0 0}
+.leadbot-messages{min-height:0}
+.leadbot-form{flex:0 0 auto}
+.leadbot-privacy{flex:0 0 auto;background:#fff}
+@media(max-width:620px){
+ .leadbot{right:14px;bottom:82px}
+ .leadbot-launch{width:58px;height:58px;min-height:58px}
+ .leadbot-label{display:none}
+ .leadbot-panel{left:10px;right:10px;top:10px;bottom:76px;width:auto;height:auto;max-width:none;max-height:none;border-radius:18px}
+ .leadbot-panel>header{border-radius:17px 17px 0 0}
+}
