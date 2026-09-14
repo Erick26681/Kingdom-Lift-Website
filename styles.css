@@ -285,3 +285,12 @@ button,input,textarea,select{font:inherit}
  .leadbot-panel{left:10px;right:10px;top:10px;bottom:76px;width:auto;height:auto;max-width:none;max-height:none;border-radius:18px}
  .leadbot-panel>header{border-radius:17px 17px 0 0}
 }
+
+/* Full Kingdom Lift shield logo — never crop the artwork */
+.brand img,.leadbot-panel>header img{object-fit:contain!important;object-position:center!important;background:#fff!important;padding:3px!important}
+.brand img{border-radius:9px!important}
+@media(max-width:620px){
+ .page-hero{min-height:0!important;height:auto!important;padding:124px 0 56px!important;overflow:hidden}
+ .page-hero h1{max-width:100%;font-size:clamp(34px,11vw,44px)!important;line-height:1.02!important;overflow-wrap:break-word}
+ .page-hero>div>p:last-child{font-size:16px}
+}
