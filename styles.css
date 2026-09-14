@@ -307,3 +307,7 @@ button,input,textarea,select{font:inherit}
  .photo-panel img{max-height:none!important;border-radius:14px}
  .leadbot-launch{width:60px!important;height:60px!important;min-height:60px!important;border-radius:50%!important;padding:0!important}
 }
+
+/* Branded estimate bubble */
+.leadbot-launch>img{display:block;width:50px;height:50px;object-fit:contain;background:#fff;border-radius:50%;padding:2px}
+@media(max-width:620px){.leadbot-launch>img{width:46px;height:46px}}
