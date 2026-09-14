@@ -294,3 +294,16 @@ button,input,textarea,select{font:inherit}
  .page-hero h1{max-width:100%;font-size:clamp(34px,11vw,44px)!important;line-height:1.02!important;overflow-wrap:break-word}
  .page-hero>div>p:last-child{font-size:16px}
 }
+
+/* Image and chat corrections from mobile review */
+.photo-panel img{width:100%!important;height:auto!important;aspect-ratio:auto!important;object-fit:contain!important;object-position:center!important;background:#07111b}
+.photo-badge{display:none!important}
+.leadbot-launch{display:grid!important;grid-template-columns:1fr!important;place-items:center!important;overflow:visible}
+.leadbot-launch span:first-child{position:relative!important;display:block!important;width:27px!important;height:21px!important;font-size:0!important;background:#07111b!important;border-radius:8px!important}
+.leadbot-launch span:first-child:after{content:""!important;position:absolute!important;right:3px!important;bottom:-6px!important;width:9px!important;height:9px!important;background:#07111b!important;clip-path:polygon(0 0,100% 0,100% 100%)!important}
+.leadbot-label{display:none!important}
+@media(max-width:620px){
+ .photo-panel{width:100%;overflow:visible}
+ .photo-panel img{max-height:none!important;border-radius:14px}
+ .leadbot-launch{width:60px!important;height:60px!important;min-height:60px!important;border-radius:50%!important;padding:0!important}
+}
