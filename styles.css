@@ -209,3 +209,26 @@ button,input,textarea,select{font:inherit}
   .area-list{grid-template-columns:1fr 1fr}
   .footer-grid,.footer-bottom{flex-direction:column}
 }
+
+/* Multi-page layout */
+.page-hero{padding:170px 0 80px;background:linear-gradient(135deg,#07111b,#132534);color:#fff}
+.page-hero h1{max-width:900px;margin:0 0 18px;font-size:clamp(42px,6vw,72px);line-height:1;letter-spacing:-.045em;text-transform:uppercase}
+.page-hero>div>p:last-child{max-width:760px;color:#c4ced6;font-size:18px}
+.nav-links a[aria-current="page"]{color:var(--gold-2)}
+.center-cta{display:flex;justify-content:center;margin-top:34px}
+.light-copy{color:#c4ced6;font-size:18px;margin-bottom:26px}
+.dark-actions .button-outline{border-color:#9c7a34;color:var(--ink)}
+.button-outline{border:1px solid currentColor;background:transparent}
+.home-contact-actions{display:flex;flex-wrap:wrap;gap:12px;align-self:center}
+.inner-quote{padding-top:90px}
+.email-link{overflow-wrap:anywhere;font-size:clamp(18px,2.5vw,30px)!important}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.contact-option{display:flex;flex-direction:column;min-height:230px;padding:30px;border:1px solid #e2ddd1;border-radius:16px;background:#fff;box-shadow:0 8px 28px rgba(20,31,40,.06)}
+.contact-option:hover{transform:translateY(-3px);box-shadow:0 18px 38px rgba(20,31,40,.12)}
+.contact-option small{color:#9b6810;font-weight:900;letter-spacing:.16em}
+.contact-option strong{margin:auto 0 10px;color:var(--ink);font-size:25px}
+.contact-option span{color:#68737d}
+.mobile-actions{display:none}
+@media(max-width:1050px){.nav-links{gap:14px;font-size:12px}}
+@media(max-width:900px){.contact-grid{grid-template-columns:1fr}.page-hero{padding:135px 0 65px}.home-contact-actions{align-items:stretch}.home-contact-actions .button{width:100%}}
+@media(max-width:620px){body{padding-bottom:64px}.mobile-actions{position:fixed;display:grid;grid-template-columns:repeat(3,1fr);left:0;right:0;bottom:0;z-index:60;background:#07111b;border-top:1px solid rgba(255,255,255,.15)}.mobile-actions a{padding:14px 8px;text-align:center;color:#fff;font-weight:900;border-right:1px solid rgba(255,255,255,.12)}.mobile-actions a:last-child{background:var(--gold);color:#111;border:0}.page-hero h1{font-size:42px}}
