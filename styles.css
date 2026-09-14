@@ -232,3 +232,34 @@ button,input,textarea,select{font:inherit}
 @media(max-width:1050px){.nav-links{gap:14px;font-size:12px}}
 @media(max-width:900px){.contact-grid{grid-template-columns:1fr}.page-hero{padding:135px 0 65px}.home-contact-actions{align-items:stretch}.home-contact-actions .button{width:100%}}
 @media(max-width:620px){body{padding-bottom:64px}.mobile-actions{position:fixed;display:grid;grid-template-columns:repeat(3,1fr);left:0;right:0;bottom:0;z-index:60;background:#07111b;border-top:1px solid rgba(255,255,255,.15)}.mobile-actions a{padding:14px 8px;text-align:center;color:#fff;font-weight:900;border-right:1px solid rgba(255,255,255,.12)}.mobile-actions a:last-child{background:var(--gold);color:#111;border:0}.page-hero h1{font-size:42px}}
+
+/* Lead-capture estimate assistant */
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.leadbot{position:fixed;right:22px;bottom:22px;z-index:80;font-size:15px}
+.leadbot-launch{display:flex;align-items:center;gap:9px;min-height:54px;padding:0 19px;border:0;border-radius:999px;background:linear-gradient(135deg,var(--gold-2),var(--gold));color:#111;box-shadow:0 12px 35px rgba(0,0,0,.32);cursor:pointer;font-weight:900}
+.leadbot-launch span{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#07111b;color:var(--gold-2)}
+.leadbot-panel{display:none;position:absolute;right:0;bottom:68px;width:min(390px,calc(100vw - 28px));height:min(610px,calc(100vh - 120px));overflow:hidden;border:1px solid rgba(255,255,255,.14);border-radius:20px;background:#f7f4ec;color:#17212a;box-shadow:0 24px 70px rgba(0,0,0,.42)}
+.leadbot-panel.open{display:flex;flex-direction:column;animation:leadbot-in .2s ease-out}
+@keyframes leadbot-in{from{opacity:0;transform:translateY(12px) scale(.98)}}
+.leadbot-panel>header{display:flex;align-items:center;gap:11px;padding:14px 15px;background:#07111b;color:#fff}
+.leadbot-panel>header img{width:42px;height:42px;border-radius:10px;object-fit:cover;border:1px solid rgba(255,255,255,.2)}
+.leadbot-panel>header div{display:grid;line-height:1.25}
+.leadbot-panel>header small{color:#aeb9c2;font-size:12px}
+.leadbot-close{margin-left:auto;width:36px;height:36px;border:0;border-radius:50%;background:rgba(255,255,255,.09);color:#fff;font-size:25px;cursor:pointer}
+.leadbot-progress{height:4px;background:#d8d3c8}
+.leadbot-progress span{display:block;width:0;height:100%;background:var(--gold);transition:width .25s ease}
+.leadbot-messages{flex:1;overflow-y:auto;padding:17px;display:flex;flex-direction:column;gap:10px}
+.leadbot-message{max-width:85%;padding:11px 13px;border-radius:14px;line-height:1.42;white-space:pre-wrap}
+.leadbot-message.bot{align-self:flex-start;background:#fff;border:1px solid #e2ddd2;border-bottom-left-radius:4px}
+.leadbot-message.user{align-self:flex-end;background:#112434;color:#fff;border-bottom-right-radius:4px}
+.leadbot-form{display:flex;gap:8px;padding:12px;border-top:1px solid #ddd8ce;background:#fff}
+.leadbot-form textarea{flex:1;resize:none;min-height:48px;max-height:90px;padding:11px;border:1px solid #cfd3d6;border-radius:10px;outline:none}
+.leadbot-form textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(217,155,36,.16)}
+.leadbot-form button{align-self:stretch;border:0;border-radius:10px;padding:0 15px;background:var(--gold);color:#111;font-weight:900;cursor:pointer}
+.leadbot-actions{padding:0 14px 12px;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.leadbot-actions[hidden]{display:none}
+.leadbot-actions a,.leadbot-actions button{display:flex;align-items:center;justify-content:center;min-height:46px;padding:8px;border:0;border-radius:9px;background:#07111b;color:#fff;text-align:center;font-weight:850;cursor:pointer}
+.leadbot-actions a:first-child{background:var(--gold);color:#111}
+.leadbot-actions button{grid-column:1/-1;background:#e4dfd4;color:#333}
+.leadbot-privacy{margin:0;padding:0 14px 12px;text-align:center;color:#747b81;font-size:11px}
+@media(max-width:620px){.leadbot{right:12px;bottom:76px}.leadbot-panel{position:fixed;left:12px;right:12px;bottom:74px;width:auto;height:min(600px,calc(100vh - 100px));border-radius:18px}.leadbot-launch b{display:none}.leadbot-launch{width:54px;padding:0;justify-content:center}.leadbot-launch span{background:transparent;color:#111;font-size:21px}}
