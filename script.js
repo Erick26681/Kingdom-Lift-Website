@@ -30,7 +30,7 @@ Thank you.`;
  const shell=document.createElement('div');
  shell.className='leadbot';
  shell.innerHTML=`
-  <button class="leadbot-launch" type="button" aria-label="Open free estimate assistant" aria-expanded="false"><span aria-hidden="true">✦</span><b>Free Estimate</b></button>
+  <button class="leadbot-launch" type="button" aria-label="Chat for a free estimate" aria-expanded="false"><span aria-hidden="true">💬</span><span class="leadbot-label">Free Estimate</span></button>
   <section class="leadbot-panel" role="dialog" aria-label="Kingdom Lift estimate assistant" aria-hidden="true">
    <header><img src="assets/kingdom-lift-logo.webp" alt=""><div><strong>Kingdom Lift Assistant</strong><small>Typically ready in under 1 minute</small></div><button class="leadbot-close" type="button" aria-label="Close assistant">×</button></header>
    <div class="leadbot-progress"><span></span></div>
