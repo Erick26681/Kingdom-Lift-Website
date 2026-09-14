@@ -1,42 +1,25 @@
+const menuButton=document.querySelector('.menu-button');
+const nav=document.querySelector('.nav-links');
+menuButton?.addEventListener('click',()=>{const open=nav?.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open));menuButton.textContent=open?'✕':'☰';});
+document.querySelectorAll('.nav-links a').forEach(link=>link.addEventListener('click',()=>{nav?.classList.remove('open');menuButton?.setAttribute('aria-expanded','false');if(menuButton)menuButton.textContent='☰';}));
+document.querySelectorAll('#year').forEach(el=>el.textContent=new Date().getFullYear());
+document.getElementById('quoteForm')?.addEventListener('submit',event=>{
+ event.preventDefault();
+ const value=id=>document.getElementById(id)?.value.trim()||'Not provided';
+ const subject='Free Junk Removal Estimate Request';
+ const body=`Hello Kingdom Lift,
 
-const menuButton = document.querySelector('.menu-button');
-const nav = document.querySelector('.nav-links');
+I would like a free junk removal estimate.
 
-menuButton?.addEventListener('click', () => {
-  const isOpen = nav.classList.toggle('open');
-  menuButton.setAttribute('aria-expanded', String(isOpen));
-  menuButton.textContent = isOpen ? '✕' : '☰';
-});
+Name: ${value('name')}
+Phone: ${value('phone')}
+City / neighborhood: ${value('location')}
+Items to remove: ${value('items')}
+Approximate amount: ${value('amount')}
+Stairs: ${value('stairs')}
 
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    nav.classList.remove('open');
-    menuButton?.setAttribute('aria-expanded', 'false');
-    if (menuButton) menuButton.textContent = '☰';
-  });
-});
+I can also text photos to 346-966-9267.
 
-document.getElementById('year').textContent = new Date().getFullYear();
-
-document.getElementById('quoteForm').addEventListener('submit', (event) => {
-  event.preventDefault();
-
-  const name = document.getElementById('name').value.trim() || 'Not provided';
-  const location = document.getElementById('location').value.trim() || 'Not provided';
-  const items = document.getElementById('items').value.trim() || 'Not provided';
-  const amount = document.getElementById('amount').value;
-  const stairs = document.getElementById('stairs').value;
-
-  const message =
-`Hi Kingdom Lift, I'd like a free junk removal estimate.
-
-Name: ${name}
-Area: ${location}
-Items: ${items}
-Approx. amount: ${amount}
-Stairs: ${stairs}
-
-I can attach photos in this text.`;
-
-  window.location.href = `sms:+14692681577?body=${encodeURIComponent(message)}`;
+Thank you.`;
+ window.location.href=`mailto:kingdomliftjunkremoval@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 });
