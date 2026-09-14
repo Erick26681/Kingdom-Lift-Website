@@ -311,3 +311,7 @@ button,input,textarea,select{font:inherit}
 /* Branded estimate bubble */
 .leadbot-launch>img{display:block;width:50px;height:50px;object-fit:contain;background:#fff;border-radius:50%;padding:2px}
 @media(max-width:620px){.leadbot-launch>img{width:46px;height:46px}}
+
+/* Preserve the full branded trailer artwork and its phone number */
+.brand-photo{background:var(--cream);padding:36px 20px}
+.brand-photo img{width:min(1100px,100%);max-height:none;height:auto;object-fit:contain;margin:0 auto;border-radius:18px}
